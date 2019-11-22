@@ -4,6 +4,11 @@ var mongojs = require("mongojs");
 var logger = require("morgan");
 var path = require("path");
 
+var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/mongoHeadlines";
+
+mongoose.connect(MONGODB_URI);
+
+
 var app = express();
 
 // Set the app up with morgan.
