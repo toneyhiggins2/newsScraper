@@ -1,0 +1,61 @@
+<nav id="navbar">
+  <h3>CNET News</h3>
+  <h6>This is a website scraper to gather breaking news from CNET</h6>
+
+</nav>
+
+<div class="container">
+  <div class="col-md-12">
+
+    <div id="scraper-box">
+      <button class="btn" id="scraper-btn">
+        Look for Breaking News
+      </button>
+    </div>
+
+    {{#each article}}
+    <div class="card">
+      <div class="card-body bg-secondary text-white ">
+        <h4 class="card-title">{{this.title}}</h4>
+        <a href="{{this.link}}" class="card-link" target="_blank">{{this.link}}</a>
+        <a href="#" class="comments" data-id="{{this.id}}" data-target="#commentsModal" data-toggle="modal">Comments</a>
+      </div>
+    </div>
+    {{/each}}
+
+    {{!-- modal --}}
+    <div class="modal show fade" id="commentsModal" tabindex="-1" role="dialog" aria-labelledby="commentsModalLabel"
+      aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="commentsModalLabel">Comments</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body" id="postComments">
+            {{!-- javascript will fill this in --}}
+          </div>
+
+          <div class="modal-body">
+            <form>
+              <input type="text" class="form-control" placeholder="Username" name="name" id="commenterName">
+              <div class="input-group">
+                <textarea class="form-control" name="comment" placeholder="Comment goes here..." id="commenterComment"></textarea>
+              </div>
+            </form>
+
+          </div>
+
+          <div class="modal-footer">
+            <button type="button" class="btn btn-success" data-dismiss="modal" id="submit">Submit</button>
+            <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</div>
