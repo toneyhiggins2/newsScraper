@@ -1,0 +1,58 @@
+body{
+    background-image: url("https://img.freepik.com/free-vector/blue-breaking-news-tv-background_1017-14201.jpg?size=626&ext=jpg");
+    background-repeat: repeat;
+  }
+  
+  .card{
+    margin-top: 20px;
+    border-radius: 15px;
+    box-shadow: 2px 2px 2px 2px #000000
+  }
+  
+  .card-link, .comments{
+    text-decoration: none;
+    color: #ffffff
+  }
+  
+  .comments{
+    float: right;
+  }
+  
+  .comment-card{
+    margin-top: 5px;
+    padding: 5px;
+    border-radius: 5px;
+    background-color: #850000;
+    color: #ffffff;
+    box-shadow: 1px 1px 1px 1px #3b3b3b
+  }
+  
+  /* ids */
+  
+  #navbar{
+    background-color: #850000;
+    border-bottom: 5px solid #000000;
+    font-size: 24px;
+    text-align: center;
+    color: #ffffff;
+  }
+  
+  #scraper-btn{
+    margin: 20px 0px;
+    font-size: 20px;
+    padding: 5px 100px;
+    border-radius: 10px;
+    border: 2px solid #000000;
+    background-color: #bd2626;
+    color: #ffffff;
+  }
+  
+  #scraper-box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  #commenterName, #commenterComment{
+    margin: 3px 0px;
+  }
