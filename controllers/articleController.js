@@ -29,10 +29,10 @@ router.get("/scrape", (req, res) => {
 
       // filter on just media links
       // Add the text and href of every link, and save them as properties of the result object
-      result.topicName = $(this).parent().children("p").children("a").text();
-      result.link = $(this).parent().children("div.assetText").children("h3").children("a").attr("href");
+      result.topicName = $(this).children(".assetText").children(".byline").children("a").text();
+      result.link = $(this).children(".assetText").children("h3").children("a").attr("href");
 
-      console.log("This is the result: " + result);
+      console.log("This is the result: ",  result);
 
       // Create a new Article using the `result` object built from scraping
       db.Article.create(result)
